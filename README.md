@@ -30,10 +30,10 @@ Install dependencies:
 npm install
 Create .env file:
 PORT=3000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=github_analyzer
+DB_HOST=process.env.DB_HOST
+DB_USER=process.env.DB_USER
+DB_PASSWORD=process.env.DB_PASSWORD
+DB_NAME=process.env.DB_NAME
 Run server:
 node server.js
 
