@@ -24,16 +24,21 @@ GitHub API
 Setup Instructions:
 
 Clone the repository:
-git clone <your-repo-link>
+git clone https://github.com/vaibhavn02/github_profile_analyzer.git
 cd github-profile-analyzer
+
 Install dependencies:
 npm install
-Create .env file:
+
+Create .env file (FOR LOCAL ONLY):
 PORT=3000
-DB_HOST=process.env.DB_HOST
-DB_USER=process.env.DB_USER
-DB_PASSWORD=process.env.DB_PASSWORD
-DB_NAME=process.env.DB_NAME
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=github_analyzer
+
+Replace your_password with your MySQL password.
+
 Run server:
 node server.js
 
@@ -60,7 +65,6 @@ followers (INT)
 following (INT)
 public_repos (INT)
 profile_url (TEXT)
-analyzed_at (TIMESTAMP)
 
 
 Live API
