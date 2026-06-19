@@ -7,7 +7,15 @@ const analyzeProfile = async (req, res) => {
 
         const username = req.params.username;
 
-        const response = await axios.get(`https://api.github.com/users/${username}`);
+        const response = await axios.get(`
+            https://api.github.com/users/${username}`,
+            {
+                headers: {
+                    Authorization: `Bearer $(process.env.DB_TOKEN)`,
+                     "User-Agent": "GitHub-Profile-App"
+                }
+            }        
+        );
 
         const data = response.data;
 
