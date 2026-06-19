@@ -11,7 +11,7 @@ const analyzeProfile = async (req, res) => {
             https://api.github.com/users/${username}`,
             {
                 headers: {
-                    Authorization: `Bearer $(process.env.DB_TOKEN)`,
+                    Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
                      "User-Agent": "GitHub-Profile-App"
                 }
             }        
