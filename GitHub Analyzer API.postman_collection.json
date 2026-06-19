@@ -1,0 +1,75 @@
+{
+  "info": {
+    "_postman_id": "78ab1f7f-7e4a-463d-ac75-a90d53a1356c",
+    "name": "GitHub Analyzer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56017473"
+  },
+  "item": [
+    {
+      "name": "Analyze GitHub User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://github-profile-analyzer-lbxl.onrender.com/api/analyze/octocat",
+          "protocol": "https",
+          "host": [
+            "github-profile-analyzer-lbxl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "analyze",
+            "octocat"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Profiles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://github-profile-analyzer-lbxl.onrender.com/api/profiles",
+          "protocol": "https",
+          "host": [
+            "github-profile-analyzer-lbxl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "profiles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://github-profile-analyzer-lbxl.onrender.com/api/profiles/virat",
+          "protocol": "https",
+          "host": [
+            "github-profile-analyzer-lbxl",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "profiles",
+            "virat"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
