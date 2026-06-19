@@ -48,7 +48,17 @@ const analyzeProfile = async (req, res) => {
         });
     } 
     catch (error) {
-        res.status(404).json({ message: 'GitHub user not found' });
+        //res.status(404).json({ message: 'GitHub user not found' });
+        console.log("GitHub Error:", error.response?.data || error.message);
+
+        if (error.response?.status === 404) {
+            return res.status(404).json({ message: "GitHub user not found" });
+        }
+
+        return res.status(500).json({
+            message: "GitHub API error",
+            error: error.response?.data || error.message
+        });
     }   
 };
 
