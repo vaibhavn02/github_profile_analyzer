@@ -1,11 +1,11 @@
 GitHub Profile Analyzer API
 
-Overview:
+## Overview:
 
 This project is a backend API built using Node.js, Express.js, and MySQL. It analyzes GitHub user profiles using the GitHub public API and stores useful insights in a database.
 
 
-Features:
+## Features:
 
 Fetch GitHub user profile data
 Store profile insights in MySQL
@@ -14,14 +14,27 @@ Get all analyzed profiles
 Get a single profile by username
 
 
-Technology Used:
+## Technology Used:
 Node.js
 Express.js
 MySQL
 GitHub API
 
+## Project Structure:
+github_profile_analyzer/
+│
+├── controllers/
+│ └── profileController.js
+│
+├── routes/
+│ └── profileRoutes.js
+│
+├── db.js
+├── server.js
+├── .env
+└── package.json
 
-Setup Instructions:
+## Setup Instructions:
 
 Clone the repository:
 git clone https://github.com/vaibhavn02/github_profile_analyzer.git
@@ -33,8 +46,8 @@ npm install
 Create .env file (FOR LOCAL ONLY):
 PORT=3000
 DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
 DB_NAME=github_analyzer
 
 Replace your_password with your MySQL password.
@@ -42,20 +55,22 @@ Replace your_password with your MySQL password.
 Run server:
 node server.js
 
+## Live API (Deployment)
+Base URL:
+https://github-profile-analyzer-lbxl.onrender.com/
 
-API Endpoints:
-
-Analyze Profile
+## API Endpoints:
+1. Analyze Profile
 GET /api/analyze/:username
 
-Get All Profiles
+2. Get All Profiles
 GET /api/profiles
 
-Get Single Profile
+3. Get Single Profile
 GET /api/profiles/:username
 
 
-Database Schema:
+## Database Schema:
 
 Table: profiles
 
@@ -67,7 +82,6 @@ public_repos (INT)
 profile_url (TEXT)
 
 
-Live API
 
 
 Author
